@@ -1,7 +1,7 @@
 {
-  "name": "@unction/{{FQNAME}}",
+  "name": "@unction/fromfunctortopairs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Takes a functor and tries to transform it into a list of key-value pairs",
   "keywords": [
     "unction",
     "functional"
@@ -14,9 +14,9 @@
     }
   ],
   "license": "ISC",
-  "homepage": "https://github.com/unctionjs/{{NAME}}#readme",
-  "repository": "github:unctionjs/{{NAME}}",
-  "bugs": "https://github.com/unctionjs/{{NAME}}/issues",
+  "homepage": "https://github.com/unctionjs/fromFunctorToPairs#readme",
+  "repository": "github:unctionjs/fromFunctorToPairs",
+  "bugs": "https://github.com/unctionjs/fromFunctorToPairs/issues",
   "main": "transpiled/source.js",
   "nyc": {
     "require": [
@@ -58,6 +58,7 @@
     "tap": "10.7.2"
   },
   "dependencies": {
-    "ramda": "0.24.1"
+    "@unction/fromiteratortoarray": "1.0.0",
+    "@unction/type": "2.0.0"
   }
 }
