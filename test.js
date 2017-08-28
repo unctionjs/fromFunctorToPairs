@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, no-undefined */
 import {test} from "tap"
 
-import fromFunctorToPairs from "./source.js"
+import fromFunctorToPairs from "./"
 
 test(({same, end}) => {
   same(
