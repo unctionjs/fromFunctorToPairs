@@ -58,7 +58,7 @@
     "tap": "10.7.2"
   },
   "dependencies": {
-    "@unction/fromiteratortoarray": "1.0.0",
+    "@unction/fromiteratortoarray": "1.1.0",
     "@unction/type": "2.0.0"
   }
 }
