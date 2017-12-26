@@ -59,8 +59,8 @@
     "tap": "11.0.0"
   },
   "dependencies": {
-    "@unction/fromiteratortoarray": "1.8.0",
-    "@unction/type": "2.8.0"
+    "@unction/fromiteratortoarray": "2.0.0",
+    "@unction/type": "3.0.0"
   },
   "files": [
     "transpiled/index.js"
