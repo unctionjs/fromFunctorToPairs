@@ -1,4 +1,4 @@
-/* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, no-undefined */
+/* eslint-disable no-undefined */
 import {test} from "tap"
 
 import fromFunctorToPairs from "./index"
