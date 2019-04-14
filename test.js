@@ -1,7 +1,7 @@
 /* eslint-disable no-undefined */
-import {test} from "tap"
+import {test} from "tap";
 
-import fromFunctorToPairs from "./index"
+import fromFunctorToPairs from "./index";
 
 test(({same, end}) => {
   same(
@@ -11,42 +11,42 @@ test(({same, end}) => {
       ccc: "c",
     }),
     [["aaa", "a"], ["bbb", "b"], ["ccc", "c"]]
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({same, end}) => {
   same(
     fromFunctorToPairs(["a", "b", "c"]),
     [[0, "a"], [1, "b"], [2, "c"]]
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({same, end}) => {
   same(
     fromFunctorToPairs(new Map([["aaa", "a"], ["bbb", "b"], ["ccc", "c"]])),
     [["aaa", "a"], ["bbb", "b"], ["ccc", "c"]]
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({same, end}) => {
   same(
     fromFunctorToPairs(new Set(["a", "b", "c"])),
     [[undefined, "a"], [undefined, "b"], [undefined, "c"]]
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({throws, end}) => {
   throws(
     () => fromFunctorToPairs(true)
-  )
+  );
 
-  end()
-})
+  end();
+});
