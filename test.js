@@ -1,7 +1,7 @@
 /* eslint-disable no-undefined */
 import {test} from "tap";
 
-import fromFunctorToPairs from "./index";
+import fromFunctorToPairs from "./";
 
 test(({same, end}) => {
   same(
