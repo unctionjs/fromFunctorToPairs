@@ -1,17 +1,23 @@
 /* eslint-disable no-undefined */
 import type from "@unction/type";
-import fromIteratorToArray from "@unction/fromiteratortoarray";
-const fromMapping = {
-  Array: (array) => array.reduce((pairs, value, index) => [...pairs, [index, value]], []),
-  Object: (object) => Object.entries(object),
-  Set: (set) => fromIteratorToArray(set.values()).map((value) => [undefined, value]),
-  Map: (map) => fromIteratorToArray(map.entries()),
-};
+import {EnumerableType} from "./types";
 
-export default function fromFunctorToPairs (pairableValue) {
-  if (fromMapping[type(pairableValue)]) {
-    return fromMapping[type(pairableValue)](pairableValue);
+export default function fromFunctorToPairs<A> (pairableValue: EnumerableType<A>) {
+  switch (type(pairableValue)) {
+    case "Array": {
+      return pairableValue.reduce((pairs: Array<[number, A]>, value: A, index: number) => [...pairs, [index, value]], []);
+    }
+    case "Object": {
+      return Object.entries(pairableValue);
+    }
+    case "Set": {
+      return [...pairableValue.entries()];
+    }
+    case "Map": {
+      return [...pairableValue];
+    }
+    default: {
+      throw new Error(`fromFunctorToPairs doesn't know how to handle ${type(pairableValue)}`);
+    }
   }
-
-  throw new Error(`fromFunctorToPairs doesn't know how to handle ${type(pairableValue)}`);
 }

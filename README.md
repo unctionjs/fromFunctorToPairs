@@ -1,4 +1,5 @@
 # @unction/fromFunctorToPairs
+**NOTE: This library has been deprecated in favor of [unction/pairsFrom](https://github.com/unctionjs/pairsFrom)**
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
