@@ -1,5 +1,5 @@
 /* eslint-disable no-undefined */
-import fromFunctorToPairs from "./index.ts";
+import fromFunctorToPairs from "./index";
 
 test(() => {
   expect(fromFunctorToPairs({
