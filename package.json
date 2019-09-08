@@ -1,6 +1,6 @@
 {
   "name": "@unction/fromfunctortopairs",
-  "version": "5.8.0",
+  "version": "5.9.0",
   "description": "Takes a functor and tries to transform it into a list of key-value pairs",
   "keywords": [
     "unction",
