@@ -64,7 +64,7 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@unction/fromiteratortoarray": "3.1.3",
-    "@unction/type": "5.0.2"
+    "@unction/fromiteratortoarray": "^3.1.4",
+    "@unction/type": "^5.0.3"
   }
 }
