@@ -1,8 +1,7 @@
 /* eslint-disable no-undefined */
 import type from "@unction/type";
-import {EnumerableType} from "./types";
 
-export default function fromFunctorToPairs<A> (pairableValue: EnumerableType<A>) {
+export default function fromFunctorToPairs<A> (pairableValue: Array<A> | Set<A> | RecordType<unknown, A> | string) {
   switch (type(pairableValue)) {
     case "Array": {
       return pairableValue.reduce((pairs: Array<[number, A]>, value: A, index: number) => [...pairs, [index, value]], []);
